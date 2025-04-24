@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listings</title>
+</head>
+<body>
+  <p>Mes groupes:</p>
+  <!--- Liste des groupes  ---->
+    {% for g in groupes %}
+    <ul>
+      <li>{{ g.nom |upper }}</li>
+    </ul>
+  {% endfor%}
+
+
+  <p>J'ai {{ groupes|length }} groupes préférés.</p>
+
+  <p>
+    {% if groupes|length < 5  %}
+      peu de
+    {% elif  groupes|length < 10 %}
+      quelques
+    {% else %}
+      beaucoup de
+    {% endif %}
+      groupes.
+  </p>
+
+</body>
+</html>

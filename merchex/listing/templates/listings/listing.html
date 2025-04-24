@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listing</title>
+</head>
+<body>
+    <h1>Titres:</h1>
+    {% for l in listings %}
+    <ul>
+        <li>{{l.title}}</li>
+    </ul>
+    {% endfor %}
+
+    <p>
+        Le nombre de titres est : {{ listings|length}}
+    </p>
+</body>
+</html>
